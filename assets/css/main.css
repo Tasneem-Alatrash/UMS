@@ -1,0 +1,11 @@
+.navbar {
+  background-color: rgb(14, 142, 246);
+}
+.navbar .nav-link {
+  color: #576787;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s;
+}

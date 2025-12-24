@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg p-3 ">
+        <div class="row w-100 justify-content-between">
+            <a class="navbar-brand w-auto text-white" href="./index.html">User Management</a>
+            <a class="nav-link w-auto bg-white " href="./create.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640">
+                    <path fill="#576787"
+                        d="M352 128C352 110.3 337.7 96 320 96C302.3 96 288 110.3 288 128L288 288L128 288C110.3 288 96 302.3 96 320C96 337.7 110.3 352 128 352L288 352L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 352L512 352C529.7 352 544 337.7 544 320C544 302.3 529.7 288 512 288L352 288L352 128z" />
+                </svg>
+                Add New User
+            </a>
+        </div>
+    </nav>
+    <main class="container mt-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h3 class="mb-4">Add New User</h3>
+                <form class="addUserForm" name="addUserForm">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="name" id="floatingInput" placeholder="">
+                        <label for="floatingInput">User Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="email" id="floatingInput"
+                            placeholder="name@example.com">
+                        <label for="floatingInput">User Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="age" id="floatingInput" placeholder="">
+                        <label for="floatingInput">User age</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="file" class="form-control" name="image" id="floatingInput"
+                            placeholder="name@example.com">
+                        <label for="floatingInput">User image</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add User</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./assets/js/create.js"></script>
+</body>
+
+</html>
