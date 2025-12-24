@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 
 const getUsers = async () => {
-  const response = await axios.get(`http://ums12.runasp.net/api/users`);
+  const response = await axios.get(`https://ums12.runasp.net/api/users`);
   return response.data;
 };
 
@@ -30,7 +30,7 @@ const displayUsers = async () => {
 displayUsers();
 const deleteUser = async (id) => {
   const response = await axios.delete(
-    `http://ums12.runasp.net/api/users/${id}`
+    `https://ums12.runasp.net/api/users/${id}`
   );
   console.log(response);
   displayUsers();
