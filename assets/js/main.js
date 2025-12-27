@@ -14,6 +14,7 @@ const getUsers = async () => {
 const displayUsers = async () => {
   try {
     const result = await getUsers();
+
     const Users = result.users
       .map((user) => {
         return `<tr>
@@ -28,6 +29,8 @@ const displayUsers = async () => {
     document.querySelector(".user .user-data").innerHTML = Users;
   } catch (error) {
     document.querySelector(".errorClass").classList.remove("d-none");
+  } finally {
+    document.querySelector(".loader").classList.add("d-none");
   }
 };
 
