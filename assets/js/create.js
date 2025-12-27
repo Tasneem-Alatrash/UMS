@@ -1,4 +1,13 @@
 const addUserForm = document.forms["addUserForm"];
+addUserForm.image.addEventListener("change", () => {
+  const file = addUserForm.image.files["0"];
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = function (e) {
+    document.querySelector(".preview").setAttribute("src", e.target.result);
+  };
+});
+
 addUserForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -7,5 +16,7 @@ addUserForm.addEventListener("submit", async (e) => {
     `https://ums12.runasp.net/api/users`,
     formData
   );
-  console.log(response);
+  if (response.status === 200) {
+    location.href = "./index.html";
+  }
 });

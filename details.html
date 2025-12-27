@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add User</title>
+    <title>UMS</title>
+
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/main.css">
 
+    <!-- (Bootstrap 5 compatible) DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
+
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
@@ -27,41 +31,32 @@
             </a>
         </div>
     </nav>
-    <main class="container mt-4">
-        <div class="card shadow-sm">
-            <div class="card-body">
-                <h3 class="mb-4">Add New User</h3>
-                <form class="addUserForm" name="addUserForm">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" name="name" id="UserName" placeholder="">
-                        <label for="UserName">User Name</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" name="email" id="UserEamil" placeholder="">
-                        <label for="UserEamil">User Email</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" name="age" id="UserAge" placeholder="">
-                        <label for="UserAge">User age</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <img src="" width="150px" class="preview" />
-                        <input type="file" class="form-control" name="image" id="UserImage" placeholder="">
-                        <label for="UserImage">User image</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Add User</button>
-                </form>
-            </div>
-        </div>
-    </main>
 
+    <main>
+        <section class="User">
+            <div class="container vh-100">
+                <div class="row  h-100 justify-content-center align-items-center">
+                    <div class="card w-50 p-5 text-center border-0 shadow-lg">
+                        <div class="card-body">
+                            <h5 class="card-title ">ID is : <span class="UserID"></span></h5>
+                            <h6 class="card-subtitle  mb-2 text-body-secondary">Name is : <spn class="UserName"></spn>
+                            </h6>
+                            <p class="card-text ">Eamil is : <span class="UserEmail"></span> </p>
+                            <p class="card-text ">Age is : <span class="UserAge"></span></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <script src="./assets/js/create.js"></script>
+    <script src="./assets/js/details.js"></script>
 </body>
 
 </html>
